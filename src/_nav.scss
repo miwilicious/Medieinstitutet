@@ -1,4 +1,5 @@
 nav {
+  height: 80px;
   position: sticky;
   top: 0;
   display: flex;
@@ -23,6 +24,17 @@ nav {
     }
     a:active {
       color: rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    section {
+      display: flex;
+      flex-direction: column;
+      a {
+      }
     }
   }
 }
