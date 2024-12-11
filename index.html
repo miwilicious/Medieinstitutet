@@ -2,24 +2,190 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0pyyjQHkzP-_h5_9JpAy1U6XKMWW0UTGb0g&s"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medieinstitutet</title>
   </head>
   <body>
-    <section>
-      <div class="hero-container"></div>
+    <nav id="home">
+      <input type="checkbox" name="drop" id="drop" />
+      <label for="drop">
+        <svg
+          class="hb"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 10 10"
+          stroke="#000"
+          stroke-width=".6"
+          fill="rgba(0,0,0,0)"
+          stroke-linecap="round"
+          style="cursor: pointer"
+        >
+          <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+            <animate
+              dur="0.2s"
+              attributeName="d"
+              values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7"
+              fill="freeze"
+              begin="start.begin"
+            />
+            <animate
+              dur="0.2s"
+              attributeName="d"
+              values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7"
+              fill="freeze"
+              begin="reverse.begin"
+            />
+          </path>
+          <rect width="10" height="10" stroke="none">
+            <animate
+              dur="2s"
+              id="reverse"
+              attributeName="width"
+              begin="click"
+            />
+          </rect>
+          <rect width="10" height="10" stroke="none">
+            <animate
+              dur="0.001s"
+              id="start"
+              attributeName="width"
+              values="10;0"
+              fill="freeze"
+              begin="click"
+            />
+            <animate
+              dur="0.001s"
+              attributeName="width"
+              values="0;10"
+              fill="freeze"
+              begin="reverse.begin"
+            />
+          </rect>
+        </svg>
+      </label>
+      <section class="dropmenu">
+        <a href="#home">Hem</a>
+        <a href="#about">Om</a>
+        <a href="#footer">Kontakt</a>
+      </section>
+    </nav>
+    <section id="hero-section">
+      <div class="hero-container">
+        <div id="hero-carousel" class="hero">
+          <button class="hero-arrow left">&#8592;</button>
+          <button class="hero-arrow right">&#8594;</button>
+          <div class="slides">
+            <div class="slide" data-index="0">
+              <div class="hero-image">
+                <img src="/src/assets/group_image_1.jpg" alt="Slide 1 Image" />
+              </div>
+              <div class="hero-text">
+                <h1>
+                  Yrkeshögskolan för webbutveckling, film och digital
+                  kommunikation
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+                <a href="/" class="mobile-apply-button"
+                  >Se alla utbildningar här</a
+                >
+                <a href="/" class="apply-button">Ansök här</a>
+              </div>
+            </div>
+            <div class="slide" data-index="1">
+              <div class="hero-image">
+                <img src="/src/assets/group_image_2.jpg" alt="Slide 2 Image" />
+              </div>
+              <div class="hero-text">
+                <h1>Fullstack Developer</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+
+                <a href="/" class="apply-button">Ansök här</a>
+              </div>
+            </div>
+            <div class="slide" data-index="2">
+              <div class="hero-image">
+                <img src="/src/assets/group_image_3.jpg" alt="Slide 3 Image" />
+              </div>
+              <div class="hero-text">
+                <h1>E-handelsutvecklare</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+                <a href="/" class="apply-button">Ansök här</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="scroll-down bounce">&#x2B9F;</button>
+        <!-- fix button when about section exists -->
+      </div>
     </section>
 
-
-    <!-- About section by Violeta-->
-
-    <section class="about-section">
-      <h2 class="about-section_title">Om Medieinstitutet</h2>
-      <p class="about-section_text">
-        Lorem ipsum dolor
-      </p>
-    </section>
     <script type="module" src="/src/main.ts"></script>
+
+    <section id="about" class="about-section">
+
+      <div class="about-container">
+
+        <h2 class="about-title">Om Medieinstitutet</h2>
+        <p class="about-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eos nesciunt officiis reiciendis ex? Cum esse doloremque perferendis odio debitis ducimus, rem molestiae placeat, velit iure, dignissimos ex atque doloribus?
+        </p>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <h3 class="about-card-title">Nära samarbete med branschföretag</h3>
+            <p class="about-card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure autem quis dolor quod ratione odit minus ex deserunt. Sint eos rem esse dolore facilis eveniet, illo nobis ducimus dignissimos dolores!
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3 class="about-card-title">De flesta studenter får jobb inom yrkesrollen</h3>
+            <p class="about-card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur delectus, quos dignissimos id quaerat sit dolorem reiciendis nemo quas minus corporis repellat obcaecati velit ipsa porro ipsam quibusdam sapiente dolore.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3 class="about-card-title">Medieinstitutet gör ett ställningstagande för kvalitet</h3>
+            <p class="about-card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores accusantium accusamus nam? Deserunt alias porro dolorem repellendus excepturi obcaecati, blanditiis qui numquam, quae totam dolor at sit aliquid commodi tenetur.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </body>
 </html>
