@@ -1,4 +1,5 @@
 import "./index.scss";
+import "./_hero.scss";
 
 const slides = document.querySelector<HTMLElement>(".slides");
 const slideElements = document.querySelectorAll<HTMLElement>(".slide");
@@ -62,3 +63,17 @@ window.addEventListener("load", () => {
     updateSlidePosition();
   }
 });
+
+const scrollDownButton = document.querySelector(".scroll-down");
+
+if (scrollDownButton) {
+  scrollDownButton.addEventListener("click", () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+}
