@@ -1,5 +1,4 @@
 import "./index.scss";
-import "./_hero.scss";
 
 const slides = document.querySelector<HTMLElement>(".slides");
 const slideElements = document.querySelectorAll<HTMLElement>(".slide");
