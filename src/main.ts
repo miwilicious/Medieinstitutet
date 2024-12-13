@@ -76,3 +76,4 @@ if (scrollDownButton) {
     }
   });
 }
+import './index.scss'
